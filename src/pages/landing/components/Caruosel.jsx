@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
-import "./landing.css";
+import "../landing.css";
 import "./slider.css";
-import airpod1 from "../assets/airpods-removebg-preview 1.png";
-import airpod2 from "../assets/airpods 2.png";
-import airpod3 from "../assets/airpods 3.png";
-import airpod4 from "../assets/airpods 4.png";
-import airpod5 from "../assets/freepik-export-20240905095811SeKW.png";
+import airpod1 from "../../../assets/airpods-removebg-preview 1.png";
+import airpod2 from "../../../assets/airpods 2.png";
+import airpod3 from "../../../assets/airpods 3.png";
+import airpod4 from "../../../assets/airpods 4.png";
+import airpod5 from "../../../assets/freepik-export-20240905095811SeKW.png";
 
-const Carousel = () => {
+export const Carousel = () => {
   const slides = [
     {
       productName: "Airpods Pro 1",
@@ -75,4 +75,4 @@ const Carousel = () => {
   );
 };
 
-export default Carousel;
+

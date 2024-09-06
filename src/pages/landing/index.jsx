@@ -1,14 +1,14 @@
-import "./landing.css";
-import search from "../assets/Search 1.png";
-import heart from "../assets/love-mobile-ui-svgrepo-com 1.png";
-import profile from "../assets/Profile.png";
-import cart from "../assets/Vector.png";
-import laptop from "../assets/pc 1.png";
-import mouse from "../assets/Mouse-removebg-preview 1.png";
+import search from "../../assets/Search 1.png";
+import heart from "../../assets/love-mobile-ui-svgrepo-com 1.png";
+import profile from "../../assets/Profile.png";
+import cart from "../../assets/Vector.png";
+import laptop from "../../assets/pc 1.png";
+import mouse from "../../assets/Mouse-removebg-preview 1.png";
 import { BsArrowUpRightCircle } from "react-icons/bs";
-import Carousel from "../components/caruosel"
+import { Carousel } from "./components/caruosel";
+import "./landing.css";
 
-function LandingPage() {
+function Landingpage() {
 
   return (
     <div className="body">
@@ -110,4 +110,4 @@ function LandingPage() {
   );
 }
 
-export default LandingPage;
+export default Landingpage;
