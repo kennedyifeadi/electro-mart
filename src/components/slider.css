@@ -1,0 +1,105 @@
+.carouselContainer {
+    position: relative;
+    width: 100%;
+    height: 27.5dvh;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    background: linear-gradient(290.45deg, #c4c4c4 17.99%, #191839 85.17%);
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .podContainer {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .currentPod a {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    border-radius: 20px;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    background: linear-gradient(274.3deg, #2c3478 -33.25%, #191839 137.09%);
+  }
+  
+  .currentPod {
+    position: absolute;
+    transition: transform 1s, opacity 1s, filter 1s;
+    transform: translateX(0);
+    opacity: 1;
+    filter: blur(0);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    padding-left: 20px;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 1;
+  }
+  
+  .currentPod img {
+    position: absolute;
+    right: 20px;
+    width: 50%;
+    object-fit: contain;
+  }
+  
+  .nextPod {
+    position: absolute;
+    transform: translateX(50%) scale(0.8); /* Initially scaled down */
+    top: 0px;
+    right: 30px;
+    opacity: 0.5; /* Partial opacity */
+    filter: blur(1px);
+    transition: transform 1s, opacity 1s, filter 1s;
+    width: 20%;
+  }
+  
+  .nextPod img {
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  /* When the next pod becomes the current */
+  .currentPod.active {
+    transform: translateX(-50%) scale(0.8); /* Moving away */
+    opacity: 0; /* Fading out */
+    filter: blur(10px); /* Blurring out */
+  }
+  
+  .nextPod.active {
+    transform: translateX(0) scale(1); /* Moving to center */
+    opacity: 0.5; /* Full opacity */
+    filter: blur(20); /* No blur */
+  }
+  
+  .podName {
+    transition: transform 1s, opacity 1s;
+    color: white;
+    width: 40%;
+    height: max-content;
+    font-size: 24px;
+  }
+  
+  .podName.fadeOut {
+    transform: translateY(-50px); /* Move up */
+    opacity: 0; /* Fade out */
+  }
+  
+  .podName.fadeIn {
+    transform: translateY(0); /* Move to original position */
+    opacity: 1; /* Fade in */
+  }
+  
